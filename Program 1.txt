@@ -1,0 +1,13 @@
+; Program 1
+; ------------------------------------------------------------
+; Purpose: Load three numbers (2, 3, and 4), add them,; and display the result on the screen.
+; ------------------------------------------------------------
+
+
+2102  ; Load value 02 into register 1
+2303  ; Load value 03 into register 3
+2404  ; Load value 04 into register 4
+5213  ; Add register 1 and register 3 (2+3), put result in register 2
+5624  ; Add register 2 and register 4 (5+4), put result in register 6
+3600  ; Store register 6 into memory location 00 (Screen output)
+C000  ; Halt the machine

@@ -1,0 +1,16 @@
+; Program 2
+; ----------------------------------------------------------------------
+; Purpose: Swap two values using a temporary register, then add a new 
+;          hex value (0A) to the first register and store the result.
+; ----------------------------------------------------------------------
+2105    ; Load value 05 into register 1
+2203    ; Load value 03 into register 2
+4013    ; Copy the value from register 1 to register 3
+4021    ; Copy the value from register 2 to register 1
+4032    ; Copy the value from register 3 to register 2
+3100    ; Store new value of register 1 into memory 00 (Screen line 1)
+3201    ; Store new value of register 2 into memory 01 (Screen line 2)
+240A    ; Load value 0A into register 4 (New value to add)
+5114    ; Add register 1 and register 4, store result in register 1
+3102    ; Store the new addition result of register 1 into memory 02
+C000    ; Halt the machine
